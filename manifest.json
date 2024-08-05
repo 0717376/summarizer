@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Page Summarizer",
+  "version": "1.0",
+  "description": "Суммаризация содержимого веб-страницы",
+  "permissions": ["activeTab", "scripting", "storage", "notifications"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Summarize Page"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["marked.min.js", "highlight.min.js", "styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
